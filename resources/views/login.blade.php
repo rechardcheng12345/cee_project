@@ -26,6 +26,7 @@
       </div>
       <a href="home" type="login" class="btn btn-primary">Login</a>
       <a href="applicationForm" type="applyMember" class="btn btn-primary">Apply Member</a>
+      
     </form>
   </div>
 </div>
