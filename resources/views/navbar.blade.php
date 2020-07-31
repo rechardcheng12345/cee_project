@@ -17,7 +17,14 @@
           <a class="nav-link" href="programme">Programme</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/">Log Out</a>
+          <a class="nav-link" href="{{ url('/logout') }}"
+            onclick="event.preventDefault();
+                      document.getElementById('logout-form').submit();">
+            Logout
+        </a>
+        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+          {{ csrf_field() }}
+        </form>
         </li>
       </ul>
     </div>

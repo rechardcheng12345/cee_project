@@ -11,12 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
-Route::get('home', function () {
-    return view('home');
-});
+Route::get('/', 'ProcessController@indexlogin');
+Route::get('/home', 'ProcessController@homepage');
 Route::get('applicationForm', function () {
     return view('applicationForm');
 });
@@ -45,3 +41,4 @@ Route::post('/publics', 'PublicsController@store')
   ->name('publics.store');
 Route::get('/publics', 'PublicsController@index')
     ->name('publics.index');
+Auth::routes();

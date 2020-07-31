@@ -234,7 +234,7 @@ class RouteCollection implements Countable, IteratorAggregate
                 return new Response('', 200, ['Allow' => implode(',', $methods)]);
             }))->bind($request);
         }
-
+        echo "<script>console.log('Debug Objects: " . $request->method() . "' );</script>";
         $this->methodNotAllowed($methods);
     }
 
